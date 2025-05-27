@@ -1,0 +1,5 @@
+/replicate https://www.girlandthegoat.com/
+/use modules to load content
+5/24
+-research how best to use objects and inheritance to create 
+something complex

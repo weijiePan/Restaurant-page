@@ -11,26 +11,27 @@ main{
 
 }
 main div{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    
     background-color: rgb(22, 197, 46);
     width:50%;
     height:100%;
-    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
-main div p{
-    line-height: 0px;
-}
-main div p.name{
-    font-size:50px;
-}
-main div p.location{
-    font-size:30px;
+#left-store-display img{
 
-
+}
+#right-store-display img{
+    width:370px;
+    height:350px;
+    position: absolute;
+    z-index:0;
+    left:2px;
+}
+#right-store-display p{
+    position: absolute;
+    left :-3000px;
 }
 footer{
     display: block;
@@ -42,3 +43,4 @@ footer{
     background-color: blueviolet;
     
 }
+

@@ -11,28 +11,40 @@ main{
 
 }
 main div{
-    
-    background-color: rgb(22, 197, 46);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     width:50%;
     height:100%;
+    flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
+}
+#left-store-display:hover{
+    transform-origin: left center;
+    transform: scaleX(1.25);
+}
+#right-store-display:hover{
+    transform-origin: right center;
+    transform: scaleX(1.25);
+}
+main div p{
+    font-size:30px;
+    line-height: 0px;
+}
+#square-font-background{
+    background-image: url("../asset/font-background/square\(1\).jpg");
+    width:400px;
+    height:150px;
+}
 
+main div #circle-font-background{
+    background-image: url("../asset/font-background/circle3.png");
+    width:400px;
+    height:400px;
 }
-#left-store-display img{
 
-}
-#right-store-display img{
-    width:370px;
-    height:350px;
-    position: absolute;
-    z-index:0;
-    left:2px;
-}
-#right-store-display p{
-    position: absolute;
-    left :-3000px;
-}
 footer{
     display: block;
     position: fixed;
@@ -43,4 +55,3 @@ footer{
     background-color: blueviolet;
     
 }
-

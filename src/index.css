@@ -3,23 +3,21 @@ body,html{
     padding:0;
     height:100vh;
 }
-main{
+#index-Page{
     display:flex;
     margin:4% 5% 5% 5%;
     height:75%;
     text-align: center;
 
 }
-main div{
+
+.store-front-page{
     display: flex;
-    text-align: center;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content:center;
     width:50%;
     height:100%;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 #left-store-display:hover{
     transform-origin: left center;
@@ -29,23 +27,26 @@ main div{
     transform-origin: right center;
     transform: scaleX(1.25);
 }
-main div p{
-    font-size:30px;
-    line-height: 0px;
+
+.font-background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
 }
 #square-font-background{
     background-image: url("../asset/font-background/square\(1\).jpg");
     width:400px;
-    height:150px;
+    height:222px;
 }
 
-main div #circle-font-background{
+#circle-font-background{
     background-image: url("../asset/font-background/circle3.png");
     width:400px;
     height:400px;
 }
 
-footer{
+#index-footer{
     display: block;
     position: fixed;
     width:100%;

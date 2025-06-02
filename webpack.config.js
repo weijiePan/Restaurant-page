@@ -4,7 +4,7 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 const { watch } = require("fs/promises");
 module.exports ={
     mode:"development",
-    entry:"./src/index.js",
+    entry:["./src/index.js"],
     devtool:"eval-source-map",
     devServer:{
         watchFiles:["./src/index.html", "./asset/morningRestaurant.jpg"]},

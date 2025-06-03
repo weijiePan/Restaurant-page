@@ -1,4 +1,5 @@
 import {homePageLoader} from "./pageLoader/homePageLoader.js";
+import { contactPageLoad } from "./pageLoader/contactPageLoad.js";
 function Tab(id){
     const div = document.createElement("div");
     const h5 = document.createElement("h5");
@@ -17,6 +18,7 @@ function NavBar(){
         nav.appendChild(navbarDivs[i]);
     }
     navbarDivs[0].addEventListener("click", homePageLoader);
+    navbarDivs[2].addEventListener("click", contactPageLoad);
     return nav;
 }
 export {NavBar};

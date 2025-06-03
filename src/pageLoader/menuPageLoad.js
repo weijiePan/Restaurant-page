@@ -1,4 +1,5 @@
 import { NavBar } from "../navBar";
+import { clearMain } from "./clearMain";
 function MenuItem(n, desc){
     let MenuItemContainer = document.createElement("div");
     let name = document.createElement("h1");
@@ -29,19 +30,15 @@ function Menu(){
 }
 function menuPageLoad(e){
     //removes main page
-    let id = e.currentTarget.id;
-    let main = e.currentTarget.parentNode;
-    while(main.firstChild){
-        main.firstChild.remove();
-    }
+    const main = document.querySelector("main");
+    
+    clearMain();
     main.setAttribute("id","menu-page");
     main.setAttribute("class", "pages");
     //load new page
     main.appendChild(NavBar());
-    if(id == "right-store-display"){
+    if(true){
         main.appendChild(Menu());
-    }else if(id == "left-store-display"){
-
     }
 }
 export{menuPageLoad};

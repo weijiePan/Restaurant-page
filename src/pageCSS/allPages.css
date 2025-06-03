@@ -4,8 +4,10 @@ nav{
     display: flex;
     gap:5%;
     font-size: 30px;
-    margin-left: 50px;
     line-height: 2px;
+    padding-left: 20px;
+    background-color: green;
+    color:red;
 }
 .pages{
     background-image: url("https://wallpaperaccess.com/full/3692914.jpg");

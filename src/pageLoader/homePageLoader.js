@@ -1,7 +1,5 @@
 import morningRestaurant  from "../../asset/morningRestaurant.jpg";
 import nightTimeRestaurant from "../../asset/nightTimeRestaurant.jpg";
-import squareBackground from "../../asset/font-background/square(1).jpg";
-import circleBackground from "../../asset/font-background/circle3.png";
 import { losAngeles, chicago } from "../restaurant.js";
 import { menuPageLoad } from "../pageLoader/menuPageLoad";
 import { clearMain } from "./clearMain.js";
@@ -15,19 +13,29 @@ function homePageLoader(){
     rightStoreDisplay.setAttribute("class", "store-front-page");
     leftStoreDisplay.setAttribute("id", "left-store-display");
     rightStoreDisplay.setAttribute("id", "right-store-display");
+    
+    const squareFontBackground = document.createElement("div");
+    const circleFontBackground = document.createElement("div");
+    squareFontBackground.setAttribute("id", "square-font-background");
+    circleFontBackground.setAttribute("id", "circle-font-background");
+    squareFontBackground.setAttribute("class", "font-background");
+    circleFontBackground.setAttribute("class", "font-background");
+    rightStoreDisplay.appendChild(circleFontBackground);
+    leftStoreDisplay.appendChild(squareFontBackground);
+    
     for(let i = 0; i < 2; i++){
-        let display;
+        let fontBackground;
         if(i == 0){
-            display = leftStoreDisplay;
+            fontBackground = squareFontBackground;
         }else{
-            display = rightStoreDisplay;
+            fontBackground = circleFontBackground;
         }
         const name = document.createElement("p");
         const city = document.createElement("p");
         name.setAttribute("class", "name");
         city.setAttribute("class", "city");
-        display.appendChild(name);
-        display.appendChild(city);
+        fontBackground.appendChild(name);
+        fontBackground.appendChild(city);
     }
     main.appendChild(leftStoreDisplay);
     main.appendChild(rightStoreDisplay);

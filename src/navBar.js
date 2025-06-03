@@ -1,3 +1,4 @@
+import {homePageLoader} from "./pageLoader/homePageLoader.js";
 function Tab(id){
     const div = document.createElement("div");
     const h5 = document.createElement("h5");
@@ -15,6 +16,7 @@ function NavBar(){
     for(let i = 0; i < navbarDivs.length; i++){
         nav.appendChild(navbarDivs[i]);
     }
+    navbarDivs[0].addEventListener("click", homePageLoader);
     return nav;
 }
 export {NavBar};

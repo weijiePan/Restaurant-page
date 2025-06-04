@@ -1,5 +1,7 @@
 import { NavBar } from "../navBar";
 import { clearMain } from "./clearMain";
+import { losAngeles, chicago } from "../restaurant";
+
 function MenuItem(n, desc){
     let MenuItemContainer = document.createElement("div");
     let name = document.createElement("h1");
@@ -17,12 +19,9 @@ function MenuItem(n, desc){
 }
 function Menu(){
     const menuContainer = document.createElement("div");
-    const foodItems = [
-        MenuItem("cheese", "fermented milk chunks"),
-        MenuItem("noodle", "stretched flour in water"),
-    ];
-    for(let i = 0; i < foodItems.length; i++){
-        menuContainer.appendChild(foodItems[i]);
+    let menuList = globalThis.currentRestaurant.menuItems;
+    for(let i = 0; i < menuList.length; i++){
+        menuContainer.appendChild(menuList[i]);
     }
     menuContainer.setAttribute("id","menu");
     return menuContainer;
@@ -31,7 +30,12 @@ function Menu(){
 function menuPageLoad(e){
     //removes main page
     const main = document.querySelector("main");
-    
+
+    if(e.currentTarget.id == "left-store-display"){
+        globalThis.currentRestaurant = losAngeles;
+    }else if(e.currentTarget.id == "right-store-display"){
+        globalThis.currentRestaurant = chicago;
+    }
     clearMain();
     main.setAttribute("id","menu-page");
     main.setAttribute("class", "pages");
@@ -41,4 +45,4 @@ function menuPageLoad(e){
         main.appendChild(Menu());
     }
 }
-export{menuPageLoad};
+export{menuPageLoad, MenuItem};

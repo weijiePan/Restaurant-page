@@ -1,16 +1,22 @@
 import { NavBar } from "../navBar";
 import { clearMain } from "./clearMain";
-import { losAngeles } from "../restaurant";
-function contactPageLoad(establishment){
+import { menuPageLoad } from "./menuPageLoad";
+
+function contactPageLoad(){
     clearMain();
     const main = document.querySelector("main");
+    main.setAttribute("id", "contact-page")
     main.appendChild(NavBar());
     const contacts = document.createElement("div");
     contacts.setAttribute("id", "contact-container");
-    for(const info in losAngeles){
+    const establishment = globalThis.currentRestaurant;
+    for(const info in establishment){
+        if(info == "menuItems"){
+            break;
+        }
         const contactInfo = document.createElement("p");
         contactInfo.setAttribute("class", "contact-info");
-        contactInfo.textContent = losAngeles[info];
+        contactInfo.textContent = establishment[info];
         contacts.appendChild(contactInfo);
     }
     main.appendChild(contacts);

@@ -3,4 +3,5 @@ import "./pageCSS/allPages.css";
 import "./pageCSS/menuPage.css";
 import "./pageCSS/contactPage.css"
 import { homePageLoader } from "./pageLoader/homePageLoader";
+globalThis.currentRestaurant;//declare currentRestaurant
 homePageLoader();

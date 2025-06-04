@@ -1,5 +1,7 @@
+
 #contact-container{
-    margin:auto;
+    margin: auto;
+    transform: translateY(50%);
     width:30%;
     height:70%;
     background-color: rgb(150, 93, 93);
